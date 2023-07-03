@@ -196,7 +196,7 @@
     $(document).ready(function () {
         var number = $('#gaji-total').val();
         var words = angkaTerbilang(number);
-        console.log(number);
+
         $('#terbilang').html(`Terbilang: # ${words} #`);
     });
 </script>
