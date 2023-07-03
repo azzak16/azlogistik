@@ -168,7 +168,7 @@
                 <thead>
                     <tr style="">
                         <th style="text-align: center">PENERIMAAN BERSIH (A-B) &nbsp&nbsp&nbsp = &nbsp&nbsp&nbsp Rp {{ number_format($transaksi->gaji_total, 0, ',', '.') }}</th>
-                        <input type="hidden" id="gaji-total" value="{{ number_format($transaksi->gaji_total, 0, ',', '.') }}">
+                        <input type="hidden" id="gaji-total" value="{{ $transaksi->gaji_total }}">
                     </tr>
                     <tr>
                         <th id="terbilang" style="text-align: center">Terbilang: # dasdasdsadsaasd #</th>
@@ -196,9 +196,9 @@
     $(document).ready(function () {
         var number = $('#gaji-total').val();
         var words = angkaTerbilang(number);
-
+        console.log(number);
         $('#terbilang').html(`Terbilang: # ${words} #`);
-    }):
+    });
 </script>
 </body>
 </html>
